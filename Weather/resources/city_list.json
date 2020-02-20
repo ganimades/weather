@@ -1,0 +1,317 @@
+[
+{
+    "id": 3082707,
+    "name": "Walbrzych",
+    "country": "PL",
+    "coord": {
+      "lon": 16.284321,
+      "lat": 50.771412
+    }
+  },
+  {
+    "id": 3091150,
+    "name": "Naklo nad Notecia",
+    "country": "PL",
+    "coord": {
+      "lon": 17.60181,
+      "lat": 53.142139
+    }
+  },
+  {
+    "id": 7530966,
+    "name": "Włocławek",
+    "country": "PL",
+    "coord": {
+      "lon": 19.060829,
+      "lat": 52.665379
+    }
+  },
+  {
+    "id": 7531696,
+    "name": "Świdwin",
+    "country": "PL",
+    "coord": {
+      "lon": 15.7973,
+      "lat": 53.7742
+    }
+  },
+  {
+    "id": 7530961,
+    "name": "Jastrzębie-Zdrój",
+    "country": "PL",
+    "coord": {
+      "lon": 18.600531,
+      "lat": 49.960629
+    }
+  },
+  {
+    "id": 7532652,
+    "name": "Bełchatów",
+    "country": "PL",
+    "coord": {
+      "lon": 19.3626,
+      "lat": 51.3545
+    }
+  },
+  {
+    "id": 7532438,
+    "name": "Świętochłowice",
+    "country": "PL",
+    "coord": {
+      "lon": 18.9102,
+      "lat": 50.297901
+    }
+  },
+  {
+    "id": 7530929,
+    "name": "Powiat sierpecki",
+    "country": "PL",
+    "coord": {
+      "lon": 19.71216,
+      "lat": 52.83353
+    }
+  },
+  {
+    "id": 7531863,
+    "name": "Jastrzębie-Zdrój",
+    "country": "PL",
+    "coord": {
+      "lon": 18.6005,
+      "lat": 49.960602
+    }
+  },
+  {
+    "id": 7531533,
+    "name": "Gostynin",
+    "country": "PL",
+    "coord": {
+      "lon": 19.46258,
+      "lat": 52.42424
+    }
+  },
+  {
+    "id": 7532212,
+    "name": "Radom",
+    "country": "PL",
+    "coord": {
+      "lon": 21.156099,
+      "lat": 51.417198
+    }
+  },
+  {
+    "id": 7530747,
+    "name": "Powiat kozienicki",
+    "country": "PL",
+    "coord": {
+      "lon": 21.4958,
+      "lat": 51.639462
+    }
+  },
+  {
+    "id": 3337499,
+    "name": "Województwo Zachodniopomorskie",
+    "country": "PL",
+    "coord": {
+      "lon": 15.5,
+      "lat": 53.5
+    }
+  },
+  {
+    "id": 766023,
+    "name": "Łomżyca",
+    "country": "PL",
+    "coord": {
+      "lon": 22.03982,
+      "lat": 53.17382
+    }
+  },
+  {
+    "id": 759083,
+    "name": "Skopanie",
+    "country": "PL",
+    "coord": {
+      "lon": 21.57295,
+      "lat": 50.481899
+    }
+  },
+  {
+    "id": 3088161,
+    "name": "Prabuty",
+    "country": "PL",
+    "coord": {
+      "lon": 19.205469,
+      "lat": 53.755001
+    }
+  },
+  {
+    "id": 7530821,
+    "name": "Powiat kłodzki",
+    "country": "PL",
+    "coord": {
+      "lon": 16.611851,
+      "lat": 50.388821
+    }
+  },
+  {
+    "id": 7532745,
+    "name": "Przasnysz",
+    "country": "PL",
+    "coord": {
+      "lon": 20.885,
+      "lat": 53.018398
+    }
+  },
+  {
+    "id": 3093826,
+    "name": "Łasztownia",
+    "country": "PL",
+    "coord": {
+      "lon": 14.56667,
+      "lat": 53.416672
+    }
+  },
+  {
+    "id": 3080902,
+    "name": "Zagórzynek",
+    "country": "PL",
+    "coord": {
+      "lon": 18.082081,
+      "lat": 51.74049
+    }
+  },
+  {
+    "id": 766573,
+    "name": "Lednica Niemiecka",
+    "country": "PL",
+    "coord": {
+      "lon": 20.066669,
+      "lat": 49.98333
+    }
+  },
+  {
+    "id": 6690165,
+    "name": "Powiat wadowicki",
+    "country": "PL",
+    "coord": {
+      "lon": 19.48374,
+      "lat": 49.89032
+    }
+  },
+  {
+    "id": 7531689,
+    "name": "Piątnica",
+    "country": "PL",
+    "coord": {
+      "lon": 22.150299,
+      "lat": 53.215801
+    }
+  },
+  {
+    "id": 7532503,
+    "name": "Tarnobrzeg",
+    "country": "PL",
+    "coord": {
+      "lon": 21.681601,
+      "lat": 50.573639
+    }
+  },
+  {
+    "id": 7532344,
+    "name": "Żory",
+    "country": "PL",
+    "coord": {
+      "lon": 18.689199,
+      "lat": 50.038898
+    }
+  },
+  {
+    "id": 7532893,
+    "name": "Pyskowice",
+    "country": "PL",
+    "coord": {
+      "lon": 18.6007,
+      "lat": 50.391499
+    }
+  },
+  {
+    "id": 7533463,
+    "name": "Trzebiatów",
+    "country": "PL",
+    "coord": {
+      "lon": 15.2825,
+      "lat": 54.055698
+    }
+  },
+  {
+    "id": 3101425,
+    "name": "Ciechocino",
+    "country": "PL",
+    "coord": {
+      "lon": 18.35445,
+      "lat": 54.612179
+    }
+  },
+  {
+    "id": 7530890,
+    "name": "Powiat płocki",
+    "country": "PL",
+    "coord": {
+      "lon": 19.7857,
+      "lat": 52.554649
+    }
+  },
+  {
+    "id": 7530898,
+    "name": "Powiat przeworski",
+    "country": "PL",
+    "coord": {
+      "lon": 22.536819,
+      "lat": 50.08913
+    }
+  },
+  {
+    "id": 7532267,
+    "name": "Bielawa",
+    "country": "PL",
+    "coord": {
+      "lon": 16.6028,
+      "lat": 50.6754
+    }
+  },
+  {
+    "id": 7533405,
+    "name": "Żarów",
+    "country": "PL",
+    "coord": {
+      "lon": 16.4932,
+      "lat": 50.942799
+    }
+  },
+  {
+    "id": 7532312,
+    "name": "Trzebownisko",
+    "country": "PL",
+    "coord": {
+      "lon": 22.0774,
+      "lat": 50.124001
+    }
+  },
+  {
+    "id": 7533336,
+    "name": "Tyszowce",
+    "country": "PL",
+    "coord": {
+      "lon": 23.723499,
+      "lat": 50.624599
+    }
+  },
+  {
+    "id": 7532210,
+    "name": "Puławy",
+    "country": "PL",
+    "coord": {
+      "lon": 21.9772,
+      "lat": 51.426498
+    }
+  }
+]

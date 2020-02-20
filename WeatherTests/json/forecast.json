@@ -1,0 +1,108 @@
+{
+    "city": {
+        "id": 7532212,
+        "name": "Radom",
+        "coord": {
+            "lon": 21.1561,
+            "lat": 51.4172
+        },
+        "country": "PL",
+        "population": 0,
+        "timezone": 3600
+    },
+    "cod": "200",
+    "message": 1.8297532,
+    "cnt": 16,
+    "list": [{
+        "dt": 1582192800,
+        "sunrise": 1582177252,
+        "sunset": 1582214269,
+        "temp": {
+            "day": 1.33,
+            "min": -0.08,
+            "max": 1.33,
+            "night": -0.08,
+            "eve": 1.33,
+            "morn": 1.33
+        },
+        "feels_like": {
+            "day": -3.05,
+            "night": -5,
+            "eve": -3.05,
+            "morn": -3.05
+        },
+        "pressure": 1022,
+        "humidity": 69,
+        "weather": [{
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04n"
+        }],
+        "speed": 2.73,
+        "deg": 180,
+        "clouds": 89
+    },
+    {
+        "dt": 1583143200,
+        "sunrise": 1583126273,
+        "sunset": 1583165843,
+        "temp": {
+            "day": 2.85,
+            "min": 1.04,
+            "max": 7.39,
+            "night": 7.39,
+            "eve": 4.35,
+            "morn": 1.04
+        },
+        "feels_like": {
+            "day": -0.64,
+            "night": -1.25,
+            "eve": -0.92,
+            "morn": -3.86
+        },
+        "pressure": 999,
+        "humidity": 91,
+        "weather": [{
+            "id": 600,
+            "main": "Snow",
+            "description": "light snow",
+            "icon": "13d"
+        }],
+        "speed": 2.48,
+        "deg": 148,
+        "clouds": 100,
+        "rain": 12.38,
+        "snow": 0.38
+    }, {
+        "dt": 1583229600,
+        "sunrise": 1583212542,
+        "sunset": 1583252348,
+        "temp": {
+            "day": 4.48,
+            "min": 3.35,
+            "max": 4.48,
+            "night": 3.35,
+            "eve": 4.45,
+            "morn": 3.9
+        },
+        "feels_like": {
+            "day": -2.18,
+            "night": -3.55,
+            "eve": -1.63,
+            "morn": -2.98
+        },
+        "pressure": 997,
+        "humidity": 78,
+        "weather": [{
+            "id": 500,
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10d"
+        }],
+        "speed": 6.89,
+        "deg": 268,
+        "clouds": 100,
+        "rain": 1.45
+    }]
+}

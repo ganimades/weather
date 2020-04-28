@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class Network: NetworkType {
     
@@ -14,32 +15,28 @@ class Network: NetworkType {
     @Injected var session: URLSession
     
     //MARK: - Networking
-    func requestData(request: RouterType, completion: @escaping (Result<Data, Error>) -> Void) {
-        do {
-            let request = try request.asUrlRequest()
-            let task = session.dataTask(with: request) { (data, response, error) in
-                if let error = error {
-                    DispatchQueue.main.async {
-                        completion(.failure(error))
+    func requestData(request: RouterType) -> Observable<Data> {
+        Observable.create { observer in
+            do {
+                let request = try request.asUrlRequest()
+                let task = self.session.dataTask(with: request) { (data, response, error) in
+                    if let error = error {
+                        observer.onError(error)
+                        return
                     }
-                    return
-                }
-                guard let data = data else {
-                    DispatchQueue.main.async {
-                        completion(.failure(NetworkError.noData))
+                    guard let data = data else {
+                        observer.onError(NetworkError.noData)
+                        return
                     }
-                    return
+                    observer.onNext(data)
                 }
-                DispatchQueue.main.async {
-                    completion(.success(data))
-                }
+            
+                task.resume()
+            } catch let error {
+                observer.onError(error)
             }
-        
-            task.resume()
-        } catch let error {
-            DispatchQueue.main.async {
-                completion(.failure(error))
-            }
+            return Disposables.create()
         }
+        
     }
 }

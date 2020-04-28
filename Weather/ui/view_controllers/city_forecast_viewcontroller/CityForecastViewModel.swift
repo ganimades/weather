@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import RxSwift
 
 class CityForecastViewModel: CityForecastViewModelType {
+    //MARK: - Private properties
+    private let disposeBag = DisposeBag()
+    
     //MARK: - Injected properties
     @Injected var network: WeatherNetworkType
     @Injected var city: City
@@ -30,14 +34,11 @@ class CityForecastViewModel: CityForecastViewModelType {
     
     //MARK: - Networking
     func loadData() {
-        network.fetchForecast(forCity: city) { [weak self] result in
-            switch result {
-            case .success(let forecast):
-                self?.prepareViewModels(for: forecast)
-            case .failure(let error):
-                self?.didError?(error)
-            }
-        }
+        network.fetchForecast(forCity: city).observeOn(MainScheduler.instance).debug().subscribe(onNext: { [weak self] forecast in
+            self?.prepareViewModels(for: forecast)
+            }, onError:  { [weak self] error in
+            self?.didError?(error)
+        }).disposed(by: disposeBag)
     }
     
     //MARK: - Utils

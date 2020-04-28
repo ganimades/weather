@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol CityNetworkType {
-    func fetchCityList(completion: @escaping (Result<[City], Error>) -> Void)
+    func fetchCityList() -> Observable<[City]>
 }
 
 class CityNetwork: CityNetworkType {
@@ -17,19 +18,9 @@ class CityNetwork: CityNetworkType {
     @Injected var network: NetworkType
     
     //MARK: - Networking
-    func fetchCityList(completion: @escaping (Result<[City], Error>) -> Void) {
-        network.requestData(request: WeatherRouter.fetchCityList) { result in
-            switch result {
-            case .success(let data):
-                do {
-                    let cityList = try JSONDecoder().decode([City].self, from: data)
-                    completion(.success(cityList))
-                } catch let error {
-                    completion(.failure(error))
-                }
-            case .failure(let error):
-                completion(.failure(error))
-            }
+    func fetchCityList() -> Observable<[City]> {
+        network.requestData(request: WeatherRouter.fetchCityList).map { data in
+            try JSONDecoder().decode([City].self, from: data)
         }
     }
 }

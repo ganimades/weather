@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol WeatherNetworkType {
-    func fetchForecast(forCity city: City, completion: @escaping (Result<Forecast, Error>) -> Void)
+    func fetchForecast(forCity city: City) -> Observable<Forecast>
 }
 
 class WeatherNetwork: WeatherNetworkType {
@@ -18,23 +19,14 @@ class WeatherNetwork: WeatherNetworkType {
     @Injected var network: NetworkType
         
     //MARK: - Networking
-    func fetchForecast(forCity city: City, completion: @escaping (Result<Forecast, Error>) -> Void) {
+    func fetchForecast(forCity city: City) -> Observable<Forecast> {
         let request = ForecastRequestModel(cityId: city.id, numberOfDays: 16)
-        network.requestData(request: WeatherRouter.fetchForecast(request: request)) { result in
-            switch result {
-            case .success(let data):
-                do {
-                    let decoder = JSONDecoder()
-                    decoder.dateDecodingStrategy = .secondsSince1970
-                    let forecast = try decoder.decode(Forecast.self, from: data)
-                    completion(.success(forecast))
-                } catch let error {
-                    completion(.failure(error))
-                }
-            case .failure(let error):
-                completion(.failure(error))
+        return network.requestData(request: WeatherRouter.fetchForecast(request: request))
+            .map { data in
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .secondsSince1970
+                return try decoder.decode(Forecast.self, from: data)
             }
-        }
     }
     
 }

@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
     
     //MARK: - Private properties
-    private let activityView = UIActivityIndicatorView(style: .medium)
+    private let activityView = UIActivityIndicatorView(style: .gray)
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class BaseViewController: UIViewController {
     }
     
     private func setupView() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .red
     }
     
     private func setupActivityIndicatorView() {

@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 class CityListViewModel: CityListViewModelType {
+    
+    //MARK: - Private properties
+    private let disposeBag = DisposeBag()
     
     //MARK: - Injected properties
     @Injected private var network: CityNetworkType
@@ -26,15 +31,11 @@ class CityListViewModel: CityListViewModelType {
     
     //MARK: - Networking
     func loadData() {
-        network.fetchCityList { [weak self] result in
-            switch result {
-            case .success(let cityList):
-                self?.prepareViewModels(for: cityList)
-            case .failure(let error):
-                self?.didError?(error)
-            }
-        }
-        
+        network.fetchCityList().observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] cityList in
+            self?.prepareViewModels(for: cityList)
+        }, onError: { [weak self] error in
+            self?.didError?(error)
+        }).disposed(by: disposeBag)
     }
     
     //MARK: - Utils

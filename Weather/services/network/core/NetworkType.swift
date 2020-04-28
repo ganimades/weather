@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol NetworkType {
-    func requestData(request: RouterType, completion: @escaping (Result<Data, Error>) -> Void)
+    func requestData(request: RouterType) -> Observable<Data>
 }
